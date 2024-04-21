@@ -11,7 +11,7 @@ function form_handler(event) {
       "Wait Predicting Price";
     xhr.onreadystatechange = function () {
       if (xhr.readyState == XMLHttpRequest.DONE) {
-        var prediction = parseFloat(xhr.responseText).toLocaleString();
+        var prediction = parseInt(xhr.responseText).toLocaleString();
         document.getElementById("prediction").innerHTML =
           "Prediction: ₹" + prediction;
       }
