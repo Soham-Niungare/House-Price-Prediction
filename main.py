@@ -6,6 +6,7 @@ import numpy as np
 app = Flask(__name__)
 data = pd.read_csv("./DataSet/Cleaned_data.csv")
 pipe = pickle.load(open('Model.pkl', 'rb'))
+
 @app.route("/")
 def index():
     locations = sorted(data['Address'].unique())
